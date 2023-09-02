@@ -1,67 +1,40 @@
-for t in range(1,101):
+n = int(input("Enter the value of n: "))
 
-for i in range(1,11):
+a = 0
 
-print(str(t).zfill(2),'x',str(i).zfill(2),'=',str(t*i).zfill(3))
+b = 1
 
-print('-'*15)
+count = 0
 
-Show hidden output
+if n <= 0:
 
-a = [1,2,3]
+print("Please enter a valid integer")
 
-a.append(5)
+elif n == 1:
 
-a
+print("Fibonacci series upto 1")
 
-[1, 2, 3, 5]
+print(a)
 
-Mean, Variance and Standard Deviation
+else:
+print("Fibonacci Sequence")
 
-# Read N numbers from the console and create a list.
+while (count < n):
 
-# Develop a program to print mean, variance and standard deviation
+print(a, end = " ")
 
-n = int(input("Enter the number students: "))
+c = a + b
 
-list1 = []
+# Updating the values of a and b by swapping
 
-for i in range(n):
+a = b
 
-marks = int(input("Enter marks of each student in python: "))
+b = c
 
-list1.append(marks)
+count += 1
 
-print("List containing marks of student: ", list1)
+Enter the value of n: 15
 
-print("-"*50)
+Fibonacci Sequence
 
-# Finding Mean
-
-sum = 0 # Initialize
-
-for i in list1:
-
-sum += i
-
-print("Sum of all the elements in the list: ", sum)
-
-x_bar = sum/len(list1)
-
-print("Mean: ", x_bar)
-
-# Finding Variance
-
-var = 0 # Initialize
-
-for i in list1:
-
-var = var + ((i - x_bar)**2)/len(list1)
-
-print("Variance: ", var)
-
-# Finding Standard Deviation
-
-std_dev = var**0.5
-
-print("Standard Deviation: ", std_dev)
+0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
